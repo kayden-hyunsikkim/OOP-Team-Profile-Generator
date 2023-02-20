@@ -1,10 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const Markdown = require('./utils/generateMarkdown.js');
-const Employeeclass = require('./employee.js');
-const Managerclass = require('./manager.js');
-const Engineerclass = require('./engineer.js');
-const Internclass = require('./Intern.js');
+const Teammember = require('./utils/generateTeammember.js');
+const Managerclass = require('./Lib/manager.js');
+const Engineerclass = require('./Lib/engineer.js');
+const Internclass = require('./Lib/Intern.js');
 
 
 function showingMsg() {
@@ -195,7 +194,7 @@ function ifstatement(data) {
 
 async function writeToFile(data) {
     try {
-        Markdown.generateMarkdown(data);
+        Teammember.generateTeammember(data);
     } catch (err) {
         console.log('Error appending data to file', err);
     }

@@ -10,42 +10,27 @@
     background-image: linear-gradient(90deg, rgb(61, 61, 252), rgb(1, 4, 95));
 }
 
-
-#cards,h1{
-    display: none;
-    margin-left: 1rem;
-    margin-top: 10px;
+.card {
+    justify-content: center;
+    height: 300px;
+    width: 100px;
+    background: linear-gradient();
+    box-shadow: 5px 5px 5px gray;
 }
+
+#cardheader {
+ background-color: #0dcaf0;
+ color:white;
+ font-size: 1.5em;
+}
+
 
 #cards div li {
     border-bottom: 0;
+    font-size: 5em;
 }
 
-
-.element {
-    margin-left: 30px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-#img {
-    width: 3em;
-    height: 3em;
-    margin-bottom: 20px;
-    margin-left: 15px;
-}
-
-.textstyle {
-    font-size: 1.15em;
-    font-weight: bold;
-}
-
-.savedcityBtn {
-    margin-top: 30px;
-    width: 16rem;
-    height: 3rem;
-    background-color: rgb(183, 245, 11);
-    color:black;
-    font-size: 20px;
-    font-weight: bold;
+section {
+    margin: auto;
+    width: 60%;
 }
