@@ -1,9 +1,4 @@
-const fs = require('fs');
 
-
-function generateMarkdown(data) {
-  const filename = 'index.html'
-  fs.writeFileSync(filename, `
   <!DOCTYPE html>
 <html lang="en">
 
@@ -37,11 +32,3 @@ function generateMarkdown(data) {
 
 </html>
   
-`);
-
-;
-}
-
-module.exports = {
-  generateMarkdown
-};

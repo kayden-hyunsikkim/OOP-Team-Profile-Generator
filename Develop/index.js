@@ -1,5 +1,11 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const Markdown = require('./utils/generateMarkdown.js');
+const Employeeclass = require('./employee.js');
+const Managerclass = require('./manager.js');
+const Engineerclass = require('./engineer.js');
+const Internclass = require('./Intern.js');
+
 
 function showingMsg() {
     console.log('Welcome to the team generator!\nUse "npm run reset" to reset the dist/folder\n\nPlease build your team ');
@@ -70,8 +76,15 @@ function initManager() {
             },
 
         ])
-        .then(function (data) {
-            let managerdata = datas.push(data);
+        .then(function (data) {         
+            let managerdata = new Managerclass.Manager (
+                data.name,
+                data.id,
+                data.email,
+                data.officenumber
+            )
+            console.log(managerdata);
+            datas.push(managerdata);
             ifstatement(data);
         })
 
@@ -108,7 +121,14 @@ function Engineer() {
                 choices: ["Engineer", 'Intern', "I don't want to add more team member"],
             }])
         .then(function (data) {
-            let engineerdata = datas.push(data);
+            let engineerdata = new Engineerclass.Engineer (
+                data.name,
+                data.id,
+                data.email,
+                data.Github
+            )
+            console.log(engineerdata);
+            datas.push(engineerdata);
             ifstatement(data);
 
         })
@@ -145,7 +165,14 @@ function Intern() {
                 choices: ["Engineer", 'Intern', "I don't want to add more team member"],
             }])
         .then(function (data) {
-            let interndata = datas.push(data);
+            let Interndata = new Internclass.Intern (
+                data.name,
+                data.id,
+                data.email,
+                data.school
+            )
+            console.log(Interndata);
+            datas.push(Interndata);
             ifstatement(data);
 
         })
@@ -160,9 +187,18 @@ function ifstatement(data) {
         Intern();
     } else {
         console.log(datas);
+        writeToFile(datas);
         return;
     }
 
+}
+
+async function writeToFile(data) {
+    try {
+        Markdown.generateMarkdown(data);
+    } catch (err) {
+        console.log('Error appending data to file', err);
+    }
 }
 
 // Run application
