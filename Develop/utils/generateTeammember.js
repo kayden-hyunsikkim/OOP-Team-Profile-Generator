@@ -2,7 +2,7 @@ const fs = require('fs');
 
 
 function generateTeammember(data) {
-    const filename = 'index.html'
+    const filename = './dist/index.html'
     fs.writeFileSync(filename, `
   <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@ function generateTeammember(data) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,200&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dist/style.css">
     <title>Team member generator</title>
 </head>
 
