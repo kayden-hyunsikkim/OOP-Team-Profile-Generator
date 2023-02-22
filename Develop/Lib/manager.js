@@ -1,3 +1,4 @@
+//Making manager class with imported employee class
 const {Employee} = require('./employee.js');
 
 class Manager extends Employee {
@@ -8,7 +9,6 @@ class Manager extends Employee {
 
    
 }
-
 
 
 module.exports = {
