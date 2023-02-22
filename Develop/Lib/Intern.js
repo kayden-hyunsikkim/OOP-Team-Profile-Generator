@@ -1,3 +1,4 @@
+//Making intern class with imported employee class
 const {Employee} = require('./employee.js');
 
 class Intern extends Employee {

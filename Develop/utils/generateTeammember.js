@@ -1,29 +1,32 @@
+//import fs module
 const fs = require('fs');
 
-
+// generating team member generator html file function
 function generateTeammember(data) {
     const filename = './dist/index.html'
     fs.writeFileSync(filename, `
-  <!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,200&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css">
-    <title>Team member generator</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,200&display=swap"
+                rel="stylesheet" />
+        <link rel="stylesheet" href="./style.css">
+        <title>Team member generator</title>
+    </head>
 
-<body>
+    <body>
+
     <header id="header">
         <p>My Team</p>
     </header>
     <section>
     `);
+
     for (let i = 0; i < data.length; i++) {
         console.log(typeof data[0]);
         console.log(data[0].hasOwnProperty('officenumber'));
@@ -80,6 +83,8 @@ function generateTeammember(data) {
     `);  
 }
 
+
+//exporting generating team member function for index.js file
 module.exports = {
     generateTeammember
 };

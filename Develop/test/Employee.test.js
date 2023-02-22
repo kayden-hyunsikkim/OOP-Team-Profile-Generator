@@ -1,3 +1,4 @@
+//testing employee class
 const employee = require('../Lib/employee');
 
 describe("employee", () => {

@@ -1,3 +1,4 @@
+//testing intern class
 const Intern = require('../Lib/Intern');
 
 describe("Intern", () => {
