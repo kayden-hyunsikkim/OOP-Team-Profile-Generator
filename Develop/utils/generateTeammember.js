@@ -14,7 +14,7 @@ function generateTeammember(data) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,200&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Team member generator</title>
 </head>
 
@@ -32,11 +32,11 @@ function generateTeammember(data) {
         <div class="card" style="width: 230px; display:inline-block; margin: 35px;">
         <div id="cardheader"class="card-header">
             <p>${data[i].name}</p>
-            <p>Manager</p>
+            <p>👨‍💼Manager</p>
         </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Id: ${data[i].id}</li>
-                <li class="list-group-item">Email: ${data[i].email}</li>
+                <li class="list-group-item">Email: <a href="mailto:${data[i].email}">${data[i].email}</a></li>
                 <li class="list-group-item">Office number: ${data[i].officenumber}</li>
             </ul>
         </div>
@@ -46,12 +46,12 @@ function generateTeammember(data) {
             <div class="card" style="width: 230px; display:inline-block; margin: 35px;">
             <div id="cardheader" class="card-header">
                 <p>${data[i].name}</p>
-                <p>Engineer</p>
+                <p>👨‍💻Engineer</p>
             </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Id: ${data[i].id}</li>
-                    <li class="list-group-item">Email: ${data[i].email}</li>
-                    <li class="list-group-item">Github: ${data[i].Github}</li>
+                    <li class="list-group-item">Email: <a id="Email" href="mailto:${data[i].email}">${data[i].email}</a></li>
+                    <li class="list-group-item">Github: <a href="https://github.com/${data[i].Github}" target="_blank">${data[i].Github}</a></li>
                 </ul>
             </div>
             `)
@@ -60,11 +60,11 @@ function generateTeammember(data) {
                 <div class="card" style="width: 230px; display:inline-block; margin: 35px;">
                 <div id="cardheader" class="card-header">
                     <p>${data[i].name}</p>
-                    <p>Intern</p>
+                    <p>🧑‍🎓Intern</p>
                 </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Id: ${data[i].id}</li>
-                        <li class="list-group-item">Email: ${data[i].email}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${data[i].email}">${data[i].email}</a></li>
                         <li class="list-group-item">School: ${data[i].school}</li>
                     </ul>
                 </div>
