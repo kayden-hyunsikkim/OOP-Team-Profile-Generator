@@ -39,7 +39,7 @@ function generateTeammember(data) {
         </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Id: ${data[i].id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${data[i].email}">${data[i].email}</a></li>
+                <li class="list-group-item">Email: <a id="Email" href="mailto:${data[i].email}">${data[i].email}</a></li>
                 <li class="list-group-item">Office number: ${data[i].officenumber}</li>
             </ul>
         </div>
@@ -67,7 +67,7 @@ function generateTeammember(data) {
                 </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Id: ${data[i].id}</li>
-                        <li class="list-group-item">Email: <a href="mailto:${data[i].email}">${data[i].email}</a></li>
+                        <li class="list-group-item">Email: <a id="Email" href="mailto:${data[i].email}">${data[i].email}</a></li>
                         <li class="list-group-item">School: ${data[i].school}</li>
                     </ul>
                 </div>
