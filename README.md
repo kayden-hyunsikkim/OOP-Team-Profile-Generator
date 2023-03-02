@@ -24,6 +24,8 @@ N/A<br><br>
 
 
 How to operate : Please type "node index.js" in teminal<br><br>
+A walkthrough video demonstrating the functionality of the application and passing tests :
+https://drive.google.com/file/d/1ppN4L37ciBebAdL8FSKjedpHJXGTfcf7/viewLinks to an external site.
 
 ![webpage image](./Develop/src/Screenshot-TOP.jpg)<br>
 ![webpage image](./Develop/src/Screenshot-bottom.jpg)<br>
